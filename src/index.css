@@ -118,3 +118,43 @@ select {
 		grid-template-columns: repeat(4, 1fr);
 	}
 }
+
+.table-wrapper {
+	width: 100%;
+	overflow-x: auto;
+}
+
+.dashboard-table {
+	width: 100%;
+	border-collapse: collapse;
+	min-width: 720px;
+}
+
+.dashboard-table caption {
+	text-align: left;
+	color: #475569;
+	margin-bottom: 12px;
+	line-height: 1.5;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+	padding: 14px 16px;
+	border-bottom: 1px solid #e2e8f0;
+	text-align: left;
+	white-space: nowrap;
+}
+
+.dashboard-table th {
+	background-color: #f8fafc;
+	color: #334155;
+	font-size: 14px;
+}
+
+.dashboard-table td {
+	color: #475569;
+}
+
+.dashboard-table tbody tr:hover {
+	background-color: #f8fafc;
+}
