@@ -1,4 +1,5 @@
 import DashboardHeader from '../components/dashboard/DashboardHeader';
+import DashboardTable from '../components/dashboard/DashboardTable';
 import StatCard from '../components/dashboard/StatCard';
 import { dashboardData } from '../data/dashboardData';
 import {
@@ -55,6 +56,8 @@ function DashboardPage() {
 					/>
 				</div>
 			</section>
+
+			<DashboardTable data={dashboardData} />
 		</main>
 	);
 }
