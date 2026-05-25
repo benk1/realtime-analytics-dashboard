@@ -8,3 +8,53 @@ body {
 	background-color: #f8fafc;
 	color: #0f172a;
 }
+
+button,
+input,
+textarea,
+select {
+	font: inherit;
+}
+
+.dashboard-page {
+	min-height: 100vh;
+	padding: 24px;
+}
+
+.dashboard-header {
+	background-color: #ffffff;
+	border: 1px solid #e2e8f0;
+	border-radius: 20px;
+	padding: 24px;
+	margin-bottom: 24px;
+}
+
+.dashboard-label {
+	color: #2563eb;
+	font-size: 14px;
+	font-weight: 700;
+	margin: 0 0 8px;
+}
+
+.dashboard-header h1 {
+	font-size: 32px;
+	margin: 0;
+}
+
+.dashboard-description {
+	color: #475569;
+	margin: 12px 0 0;
+	max-width: 640px;
+	line-height: 1.6;
+}
+
+.dashboard-section {
+	background-color: #ffffff;
+	border: 1px solid #e2e8f0;
+	border-radius: 20px;
+	padding: 24px;
+}
+
+.dashboard-section h2 {
+	margin-top: 0;
+}
