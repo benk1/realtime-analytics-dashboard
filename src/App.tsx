@@ -1,10 +1,7 @@
+import DashboardPage from './pages/DashboardPage';
+
 function App() {
-	return (
-		<main>
-			<h1>Realtime Analytics Dashboard</h1>
-			<p>Project setup is working.</p>
-		</main>
-	);
+	return <DashboardPage />;
 }
 
 export default App;
