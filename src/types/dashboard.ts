@@ -7,3 +7,8 @@ export type DashboardItem = {
 	region: string;
 	product: string;
 };
+
+export type DashboardFilters = {
+	region?: string;
+	product?: string;
+};
