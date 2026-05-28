@@ -158,3 +158,42 @@ select {
 .dashboard-table tbody tr:hover {
 	background-color: #f8fafc;
 }
+
+.filters-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 16px;
+}
+
+.form-control {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.form-control label {
+	color: #334155;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.form-control select {
+	width: 100%;
+	border: 1px solid #cbd5e1;
+	border-radius: 12px;
+	background-color: #ffffff;
+	color: #0f172a;
+	padding: 12px 14px;
+	outline: none;
+}
+
+.form-control select:focus-visible {
+	border-color: #2563eb;
+	box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18);
+}
+
+@media (min-width: 768px) {
+	.filters-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
