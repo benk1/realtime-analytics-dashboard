@@ -1,5 +1,15 @@
 import type { DashboardItem } from '../types/dashboard';
 
+export const regionOptions = ['All', 'Europe', 'Africa', 'Asia', 'America'];
+
+export const productOptions = [
+	'All',
+	'Website',
+	'Mobile App',
+	'API',
+	'Dashboard',
+];
+
 export const dashboardData: DashboardItem[] = [
 	{
 		id: 1,

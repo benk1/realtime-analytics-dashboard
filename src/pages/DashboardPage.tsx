@@ -1,6 +1,7 @@
 import DashboardFilters from '../components/dashboard/DashboardFilters';
 import DashboardHeader from '../components/dashboard/DashboardHeader';
 import DashboardTable from '../components/dashboard/DashboardTable';
+import LiveUpdateControl from '../components/dashboard/LiveUpdatesControl';
 import StatCard from '../components/dashboard/StatCard';
 import { useDashboardData } from '../hooks/useDashboardData';
 import {
@@ -9,16 +10,24 @@ import {
 	formatPercentage,
 } from '../utils/formatter';
 
-const regionOptions = ['All', 'Europe', 'Africa', 'Asia', 'America'];
-const productOptions = ['All', 'Website', 'Mobile App', 'API', 'Dashboard'];
-
 function DashboardPage() {
-	const { filters, filteredData, totals, conversionRate, handleFilterChange } =
-		useDashboardData();
+	const {
+		filters,
+		filteredData,
+		totals,
+		conversionRate,
+		isLive,
+		toggleLiveUpdates,
+		handleFilterChange,
+		regionOptions,
+		productOptions,
+	} = useDashboardData();
 
 	return (
 		<main className="dashboard-page">
 			<DashboardHeader />
+
+			<LiveUpdateControl isLive={isLive} onToggle={toggleLiveUpdates} />
 
 			<DashboardFilters
 				filters={filters}
