@@ -1,3 +1,6 @@
+import ProductSalesChart from '../components/dashboard/charts/ProductSalesChart';
+import RevenueChart from '../components/dashboard/charts/RevenueChart';
+import VisitorsChart from '../components/dashboard/charts/VisitorsChart';
 import DashboardFilters from '../components/dashboard/DashboardFilters';
 import DashboardHeader from '../components/dashboard/DashboardHeader';
 import DashboardTable from '../components/dashboard/DashboardTable';
@@ -69,6 +72,13 @@ function DashboardPage() {
 					/>
 				</div>
 			</section>
+
+			<div className="charts-grid">
+				<VisitorsChart data={filteredData} />
+				<RevenueChart data={filteredData} />
+			</div>
+
+			<ProductSalesChart data={filteredData} />
 
 			<DashboardTable data={filteredData} />
 		</main>
