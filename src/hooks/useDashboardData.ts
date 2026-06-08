@@ -100,6 +100,10 @@ export function useDashboardData() {
 		}));
 	}
 
+	function resetFilters() {
+		setFilters(initialFilters);
+	}
+
 	function toggleLiveUpdates() {
 		setIsLive((currentValue) => !currentValue);
 	}
@@ -112,6 +116,7 @@ export function useDashboardData() {
 		isLive,
 		toggleLiveUpdates,
 		handleFilterChange,
+		resetFilters,
 		regionOptions,
 		productOptions,
 	};
