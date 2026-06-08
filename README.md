@@ -14,8 +14,18 @@ The dashboard displays simulated business analytics data with KPI cards, filters
 
 ## Project Preview
 
+## Screenshots
+
+### Dashboard Overview
+
 ![Dashboard overview](public/screenshots/dashboard-overview.png)
-![Dashboard overview](public/screenshots/dashboard-emptystate.png)
+
+### Filters
+
+![Dashboard overview](public/screenshots/dashboard-empty-state.png)
+
+### Empty State
+
 ![Dashboard overview](public/screenshots/dashboard-filters.png)
 
 ---
