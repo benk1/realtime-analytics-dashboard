@@ -1,8 +1,14 @@
 # Realtime Analytics Dashboard
 
-A responsive real-time analytics dashboard built with **React**, **TypeScript**, and **Recharts**.
+A responsive real-time analytics dashboard built with **React**, **TypeScript**, **Vite** and **Recharts**.
+
+Live demo: https://realtime-analytics-dashboard-eight.vercel.app/
 
 The dashboard displays simulated business analytics data with KPI cards, filters, charts, a data table, live updates, and empty state handling.
+
+## Live Demo
+
+[View the live dashboard](https://realtime-analytics-dashboard-eight.vercel.app/)
 
 ---
 
