@@ -243,3 +243,20 @@ select {
 	color: #475569;
 	line-height: 1.5;
 }
+
+.charts-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 24px;
+}
+
+.chart-container {
+	width: 100%;
+	height: 320px;
+}
+
+@media (min-width: 1024px) {
+	.charts-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
