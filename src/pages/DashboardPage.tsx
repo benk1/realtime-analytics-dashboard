@@ -6,6 +6,7 @@ import DashboardHeader from '../components/dashboard/DashboardHeader';
 import DashboardTable from '../components/dashboard/DashboardTable';
 import LiveUpdateControl from '../components/dashboard/LiveUpdatesControl';
 import StatCard from '../components/dashboard/StatCard';
+import EmptyState from '../components/ui/EmptyState';
 import { useDashboardData } from '../hooks/useDashboardData';
 import {
 	formatCurrency,
@@ -22,9 +23,12 @@ function DashboardPage() {
 		isLive,
 		toggleLiveUpdates,
 		handleFilterChange,
+		resetFilters,
 		regionOptions,
 		productOptions,
 	} = useDashboardData();
+
+	const hasData = filteredData.length > 0;
 
 	return (
 		<main className="dashboard-page">
@@ -37,6 +41,7 @@ function DashboardPage() {
 				regionOptions={regionOptions}
 				productOptions={productOptions}
 				onFilterChange={handleFilterChange}
+				onResetFilters={resetFilters}
 			/>
 
 			<section className="dashboard-section" aria-labelledby="overview-heading">
@@ -73,14 +78,28 @@ function DashboardPage() {
 				</div>
 			</section>
 
-			<div className="charts-grid">
-				<VisitorsChart data={filteredData} />
-				<RevenueChart data={filteredData} />
-			</div>
+			{hasData ? (
+				<>
+					<div className="charts-grid">
+						<VisitorsChart data={filteredData} />
+						<RevenueChart data={filteredData} />
+					</div>
 
-			<ProductSalesChart data={filteredData} />
+					<ProductSalesChart data={filteredData} />
 
-			<DashboardTable data={filteredData} />
+					<DashboardTable data={filteredData} />
+				</>
+			) : (
+				<section className="dashboard-section" aria-labelledby="empty-heading">
+					<EmptyState
+						titleId="empty-heading"
+						title="No data found"
+						message="There are no dashboard records matching the selected filters. Try changing your filters or reset them."
+						actionLabel="Reset filters"
+						onAction={resetFilters}
+					/>
+				</section>
+			)}
 		</main>
 	);
 }
