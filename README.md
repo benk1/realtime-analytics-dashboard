@@ -120,5 +120,5 @@ Users can:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/realtime-analytics-dashboard.git
+git clone https://github.com/benk1/realtime-analytics-dashboard.git
 ```
